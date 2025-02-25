@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PDF2AIDATA</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="app">
+    <p class="title">PDF2AIDATA</p>
+    <button class="button" id="UploadBtn">Upload PDF</button>
+    <input type="file" id="UploadPdf" style="display: none;" accept="application/pdf">
+    <hr class="divider" />
+    <code id="fileName"></code>
+    <hr class="divider" />
+    <div style="padding: 0.01em 16px;">
+      <div style="color: #fff;background-color: #616161;">
+        <div id="ProgBar" class="progressbar" style="height: 20px;width: 100%;"></div>
+      </div>
+      <hr class="divider" />
+      <p class="subtitle" id="ProgDisc">Completed <span id="completedpages">0</span> of <span
+          id="allpages">_</span>pages</p>
+    </div>
+
+  </div>
+  <canvas id="pdfCanvas" height="0" width="0"></canvas>
+  <script src="pdf.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
